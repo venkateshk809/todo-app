@@ -1,0 +1,24 @@
+.textinput {
+  padding: 3px;
+}
+
+.add {
+  width: 100%;
+  height: 35px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.text {
+  height: 45px;
+  width: 100%;
+  font: large;
+  font-weight: 200;
+  border-radius: 3px;
+}
+
+.addtodo {
+  width: 80%;
+}
