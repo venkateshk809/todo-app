@@ -67,7 +67,9 @@ function App() {
       }
     });
   };
-  const deleteTodo = (id) => {};
+  const deleteTodo = (id) => {
+    setAllTodos(allTodos.filter((todo) => todo.id !== id));
+  };
   return (
     <div className="entireapp">
       <div className="App">
