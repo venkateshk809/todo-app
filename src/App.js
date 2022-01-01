@@ -49,6 +49,25 @@ function App() {
   const CompletedTodosHandler = () => {
     setShowTodos(allTodos.filter((todo) => todo.done));
   };
+
+  const changeTypeOfTodo = (bool, id) => {
+    console.log("app", bool, id);
+    allTodos.forEach((todo) => {
+      if (todo.id === id) {
+        todo.done = !bool;
+      }
+    });
+  };
+
+  const editTodo = (id, name) => {
+    console.log(id, name);
+    allTodos.forEach((todo) => {
+      if (todo.id === id) {
+        todo.name = name;
+      }
+    });
+  };
+  const deleteTodo = (id) => {};
   return (
     <div className="entireapp">
       <div className="App">
@@ -67,7 +86,12 @@ function App() {
         {showTodos.length === 0 ? (
           <h1>No Todos to show</h1>
         ) : (
-          <ShowTodo todos={showTodos}></ShowTodo>
+          <ShowTodo
+            todos={showTodos}
+            changeTypeOfTodo={changeTypeOfTodo}
+            editTodo={editTodo}
+            deleteTodo={deleteTodo}
+          ></ShowTodo>
         )}
       </div>
     </div>
@@ -75,3 +99,15 @@ function App() {
 }
 
 export default App;
+
+/* 
+Variable creation and modification
+Array creation and modification
+String creation and modification
+Object creation and modification
+
+Creating functions 
+
+functions based on Arrays,strings, objects
+
+*/
