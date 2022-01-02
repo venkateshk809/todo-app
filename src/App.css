@@ -3,9 +3,11 @@
   padding: 0px;
 }
 
-/*   display: flex;
+.entireapp {
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+}
 
 .App {
   display: flex;
@@ -19,15 +21,8 @@
   padding: 10px;
 }
 
-.entireapp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .category {
   width: 80%;
-  display: flex;
 }
 
 .btn {
@@ -49,4 +44,10 @@
 .btn:visited {
   background-color: rgb(253, 0, 0);
   color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .category {
+    display: flex;
+  }
 }
